@@ -1,6 +1,6 @@
 {
   "name": "@brootal/brosay",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tell Brootal Bro what to say",
   "license": "BSD-2-Clause",
   "homepage": "brootal.io",
@@ -41,7 +41,12 @@
   },
   "devDependencies": {
     "mocha": "^6.2.0",
-    "xo": "^0.24.0"
+    "xo": "^0.24.0",
+    "yorkie": "^2.0.0"
+  },
+  "gitHooks": {
+    "pre-commit": "sh patch_version.sh",
+    "post-merge": "sh patch_version_with_commit.sh"
   },
   "xo": {
     "space": true
